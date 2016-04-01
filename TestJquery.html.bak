@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="js/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+<form action="#" method="get">
+		<hr>
+		<input type="text" name="text"><span style="color:red;">aa</span>
+</form>
+    <button name="bt">点击</button>
+</body>
+<script type="text/javascript">
+	
+		
+		//input选择器； $(input:type).bind(event,functtion);
+		
+		//获取字符串的长度 $('tag').val().kength;
+		
+		//ready()页面加载时执行代码
+		
+		
+		$(function(){
+
+				$('input:text').bind('keyup',function(){
+					
+					var length = $('input:text').val().length;
+						if(length<1){
+							$('span').text('长度必须大于6');
+						}else{
+							$('span').text('正确');
+						}
+       	
+    });
+				
+		})
+    
+</script>
+</html>
